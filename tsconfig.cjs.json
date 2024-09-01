@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "module": "Node16",
+    "noEmit": false,
+    "moduleResolution": "node16",
+    "verbatimModuleSyntax": false,
+    "allowImportingTsExtensions": false
+  },
+  "exclude": ["lib"]
+}

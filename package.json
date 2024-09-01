@@ -1,0 +1,43 @@
+{
+  "name": "@jondotsoy/simplerpc",
+  "description": "Make a RPC with typescript easily",
+  "module": "index.ts",
+  "type": "module",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./lib/types/*"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/esm/simplerpc.js",
+      "types": "./lib/types/simplerpc.d.ts"
+    },
+    "./create-http-client": {
+      "import": "./lib/esm/create-http-client.js",
+      "types": "./lib/types/create-http-client.d.ts"
+    },
+    "./create-http-server": {
+      "import": "./lib/esm/create-http-server.js",
+      "types": "./lib/types/create-http-server.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "artur": "^1.2.1",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "fmt": "prettier -w ."
+  }
+}
