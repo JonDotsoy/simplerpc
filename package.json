@@ -1,6 +1,7 @@
 {
   "name": "@jondotsoy/simplerpc",
   "description": "Make a RPC with typescript easily",
+  "version": "0.1.0",
   "module": "index.ts",
   "type": "module",
   "typesVersions": {
@@ -38,6 +39,7 @@
     "prettier": "^3.3.3"
   },
   "scripts": {
+    "prepack": "make build",
     "fmt": "prettier -w ."
   }
 }
