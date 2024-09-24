@@ -1,13 +1,13 @@
 import { createHTTPClient, createHTTPServer } from "../src/simplerpc.js";
 import { expect, test, mock, afterAll } from "bun:test";
 
-const ends = new Set<() => Promise<any>>()
+const ends = new Set<() => Promise<any>>();
 
 afterAll(async () => {
   for (const end of ends) {
-    await end()
+    await end();
   }
-})
+});
 
 test("", async () => {
   const service = {

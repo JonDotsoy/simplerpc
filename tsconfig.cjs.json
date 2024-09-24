@@ -8,5 +8,5 @@
     "verbatimModuleSyntax": false,
     "allowImportingTsExtensions": false
   },
-  "exclude": ["lib","tests"]
+  "exclude": ["lib", "tests"]
 }

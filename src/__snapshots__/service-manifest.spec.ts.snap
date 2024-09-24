@@ -1,0 +1,27 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should make a definition to export resources 1`] = `
+"type __type_0 = {
+    /** profile */
+    per: {
+        name: string;
+        age: number | string;
+    };
+};
+type __type_1 = {};
+type __type_2 = {
+    names: string[];
+    profiles: {
+        name: string;
+        age: number | string;
+    }[];
+};
+type __type_3 = {
+    foo: string;
+};
+
+export type read = (args_0: __type_0, ...args_1: unknown[]) => Promise<__type_1>;
+export type list = (args_0: void | undefined, ...args_1: unknown[]) => Promise<__type_2>;
+export type echo = (args_0: void | undefined, ...args_1: unknown[]) => Promise<void | undefined>;
+export type rec = (args_0: __type_3, ...args_1: unknown[]) => Promise<void | undefined>;"
+`;

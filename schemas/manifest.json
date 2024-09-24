@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "input": {
+            "anyOf": [
+              {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$object": {
+                        "type": "object",
+                        "additionalProperties": {
+                          "$ref": "#/definitions/manifest/properties/services/items/properties/input/anyOf/0"
+                        }
+                      }
+                    },
+                    "required": ["$object"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$string": {
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": ["$string"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$number": {
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": ["$number"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$boolean": {
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": ["$boolean"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$array": {
+                        "$ref": "#/definitions/manifest/properties/services/items/properties/input/anyOf/0"
+                      }
+                    },
+                    "required": ["$array"],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "$optional": {
+                        "$ref": "#/definitions/manifest/properties/services/items/properties/input/anyOf/0"
+                      }
+                    },
+                    "required": ["$optional"],
+                    "additionalProperties": false
+                  }
+                ]
+              },
+              {}
+            ]
+          },
+          "output": {
+            "$ref": "#/definitions/manifest/properties/services/items/properties/input"
+          }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["services"],
+  "additionalProperties": false,
+  "title": "manifest",
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

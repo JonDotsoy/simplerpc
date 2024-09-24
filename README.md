@@ -6,8 +6,8 @@ SimpleRPC is a lightweight RPC (Remote Procedure Call) framework written in Type
 
 ## Features
 
-* Expose services over HTTP using `create-http-serve`
-* Establish client connections using `create-http-client`
+- Expose services over HTTP using `create-http-serve`
+- Establish client connections using `create-http-client`
 
 ## Getting Started
 
@@ -26,22 +26,25 @@ Here's an example of how to use SimpleRPC:
 
 ```ts
 import { createHTTPServer } from "@jondotsoy/simplerpc";
-import * as MyServices from "./my-services.js"; 
+import * as MyServices from "./my-services.js";
 
 const router = await createHTTPServer(MyServices);
 
 serve({
   port: 3000,
-  fetch: async (r) => (await router.fetch(r)) ?? new Response(null, { status: 404 }),
+  fetch: async (r) =>
+    (await router.fetch(r)) ?? new Response(null, { status: 404 }),
 });
 ```
 
 **Client Side (connecting to a service)**
 
 ```ts
-import { createHTTPClient } from "@jondotsoy/simplerpc"; 
+import { createHTTPClient } from "@jondotsoy/simplerpc";
 
-const MyServices = await createHTTPClient<typeof import("./my-services.js")>('http://localhost:3000');
+const MyServices = await createHTTPClient<typeof import("./my-services.js")>(
+  "http://localhost:3000",
+);
 ```
 
 ## License
