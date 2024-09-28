@@ -1,5 +1,8 @@
 # SimpleRPC
 
+> [!WARNING]
+> STATE: Proposal
+
 SimpleRPC is a lightweight RPC (Remote Procedure Call) framework written in TypeScript. It allows you to expose services over HTTP and establish communication between different applications.
 
 > **Note:** This project is designed to work with TypeScript projects. If you need to connect between other languages, please consider using gRCP or other RPC options.
